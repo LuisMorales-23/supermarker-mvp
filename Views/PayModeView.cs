@@ -13,32 +13,33 @@ namespace Supermarket_mvp.Views
 {
     public partial class PayModeView : Form, IPayModeView
     {
-       
+
         private bool isEdit;
         private bool isSuccesful;
         private string message;
+      
 
         public string PayModeId
         {
             get { return TxtPayModeId.Text; }
-            set {  TxtPayModeId.Text = value;}
+            set { TxtPayModeId.Text = value; }
         }
-        public string PayModeName 
+        public string PayModeName
         {
-            get {return TxtPayModeName.Text;}
-            set {TxtPayModeName.Text = value;}
+            get { return TxtPayModeName.Text; }
+            set { TxtPayModeName.Text = value; }
         }
-        public string PayModeObservation 
+        public string PayModeObservation
         {
-            get {return TxtPayModeObservation.Text; }
-            set { TxtPayModeObservation.Text = value;}
+            get { return TxtPayModeObservation.Text; }
+            set { TxtPayModeObservation.Text = value; }
         }
-        public string SearchValue 
+        public string SearchValue
         {
-            get {return TxtSearch.Text;}
-            set { TxtSearch.Text = value;}
+            get { return TxtSearch.Text; }
+            set { TxtSearch.Text = value; }
         }
-        public bool IsEdit 
+        public bool IsEdit
         {
             get { return isEdit; }
             set { isEdit = value; }
@@ -49,7 +50,7 @@ namespace Supermarket_mvp.Views
             get { return isSuccesful; }
             set { isSuccesful = value; }
         }
-        public string Message 
+        public string Message
         {
             get { return message; }
             set { message = value; }
@@ -88,6 +89,24 @@ namespace Supermarket_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty );
                 }
             };
+        }
+        private static PayModeView instance;
+        public static PayModeView GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PayModeView();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+
+            return instance;
         }
 
     }
