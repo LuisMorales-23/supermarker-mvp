@@ -13,8 +13,8 @@ namespace Supermarket_mvp.Models //namespace Supermarket_mvp.Models // Espacio d
         void Edit(PayModeModel payModeModel); // Método para editar un modo de pago existente
         void Delete(int id); // Método para eliminar un modo de pago basado en su ID
         IEnumerable<PayModeModel> GetAll(); // Método para obtener todos los modos de pago
-        IEnumerable<PayModeModel> Get(string value); // Método para obtener modos de pago que coinciden con un valor específico
-        IEnumerable<PayModeModel> GetByValue(string searchValue);
+        IEnumerable<PayModeModel> GetByValue(string value); // Método para obtener modos de pago que coinciden con un valor específico
+       
     }
 }
 
