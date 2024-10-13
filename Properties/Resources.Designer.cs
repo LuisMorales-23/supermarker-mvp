@@ -93,6 +93,26 @@ namespace Supermarket_mvp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carbon__collapse_categories__1_ {
+            get {
+                object obj = ResourceManager.GetObject("carbon--collapse-categories (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap categorias {
+            get {
+                object obj = ResourceManager.GetObject("categorias", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
@@ -116,6 +136,16 @@ namespace Supermarket_mvp.Properties {
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic__baseline_search {
+            get {
+                object obj = ResourceManager.GetObject("ic--baseline-search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +216,16 @@ namespace Supermarket_mvp.Properties {
         internal static System.Drawing.Bitmap sell {
             get {
                 object obj = ResourceManager.GetObject("sell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weui__arrow_filled__1_ {
+            get {
+                object obj = ResourceManager.GetObject("weui--arrow-filled (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
