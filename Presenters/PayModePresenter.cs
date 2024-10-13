@@ -95,7 +95,7 @@ namespace Supermarket_mvp.Presenters
             try
             {
                 // se recupera el objeto de la fila seleccionada del dataviewgrid
-                var payMode = (PayModeModel)payModeBindingSource.Current;
+                var payMode = (PayModeModel) payModeBindingSource.Current;
                 // Se invoca el Metodo Delete del repositorio pasandole el ID del Pay Mode
 
                 repository.Delete(payMode.Id);
