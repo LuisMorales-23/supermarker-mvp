@@ -34,11 +34,6 @@
             pictureBox1 = new PictureBox();
             tabControl1 = new TabControl();
             tabPageCategoriesList = new TabPage();
-            panel2 = new Panel();
-            BtnClose = new Button();
-            BtnDelete = new Button();
-            BtnEdit = new Button();
-            BtnNew = new Button();
             DgPayMode = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
@@ -52,14 +47,19 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            BtnNew = new Button();
+            BtnEdit = new Button();
+            BtnDelete = new Button();
+            BtnClose = new Button();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCategoriesList.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tabPageCategoriesDetail.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -118,60 +118,11 @@
             tabPageCategoriesList.Text = "Categories List";
             tabPageCategoriesList.UseVisualStyleBackColor = true;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Transparent;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(BtnClose);
-            panel2.Controls.Add(BtnDelete);
-            panel2.Controls.Add(BtnEdit);
-            panel2.Controls.Add(BtnNew);
-            panel2.Location = new Point(572, 14);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 298);
-            panel2.TabIndex = 4;
-            // 
-            // BtnClose
-            // 
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(32, 226);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(145, 59);
-            BtnClose.TabIndex = 3;
-            BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(32, 147);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(145, 61);
-            BtnDelete.TabIndex = 2;
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.ForeColor = SystemColors.ControlLightLight;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(32, 77);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(145, 55);
-            BtnEdit.TabIndex = 1;
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnNew
-            // 
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(32, 13);
-            BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(145, 53);
-            BtnNew.TabIndex = 0;
-            BtnNew.UseVisualStyleBackColor = true;
-            // 
             // DgPayMode
             // 
             DgPayMode.AllowUserToAddRows = false;
             DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(20, 65);
@@ -182,6 +133,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.weui__arrow_filled__1_;
             BtnSearch.Location = new Point(497, 24);
             BtnSearch.Name = "BtnSearch";
@@ -191,6 +143,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(58, 26);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Search Categories";
@@ -298,6 +251,63 @@
             label2.TabIndex = 0;
             label2.Text = "Categorie Id";
             // 
+            // BtnNew
+            // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Location = new Point(32, 13);
+            BtnNew.Name = "BtnNew";
+            BtnNew.Size = new Size(145, 53);
+            BtnNew.TabIndex = 0;
+            BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdit.ForeColor = SystemColors.ControlLightLight;
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(32, 77);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(145, 55);
+            BtnEdit.TabIndex = 1;
+            BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(32, 147);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(145, 61);
+            BtnDelete.TabIndex = 2;
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnClose
+            // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(32, 226);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(145, 59);
+            BtnClose.TabIndex = 3;
+            BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel2.BackColor = Color.White;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(BtnClose);
+            panel2.Controls.Add(BtnDelete);
+            panel2.Controls.Add(BtnEdit);
+            panel2.Controls.Add(BtnNew);
+            panel2.ForeColor = Color.Transparent;
+            panel2.Location = new Point(572, 14);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 298);
+            panel2.TabIndex = 4;
+            // 
             // CategoriesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -313,11 +323,11 @@
             tabControl1.ResumeLayout(false);
             tabPageCategoriesList.ResumeLayout(false);
             tabPageCategoriesList.PerformLayout();
-            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DgPayMode).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tabPageCategoriesDetail.ResumeLayout(false);
             tabPageCategoriesDetail.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -333,12 +343,7 @@
         private TextBox TxtSearch;
         private PictureBox pictureBox2;
         private Button BtnSearch;
-        private Panel panel2;
         private DataGridView DgPayMode;
-        private Button BtnNew;
-        private Button BtnClose;
-        private Button BtnDelete;
-        private Button BtnEdit;
         private TextBox TxtCategoriesDescription;
         private TextBox TxtCategoriesName;
         private TextBox TxtCategoriesId;
@@ -347,5 +352,10 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private Panel panel2;
+        private Button BtnClose;
+        private Button BtnDelete;
+        private Button BtnEdit;
+        private Button BtnNew;
     }
 }

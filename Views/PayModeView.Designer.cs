@@ -106,9 +106,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.buy;
-            pictureBox1.Location = new Point(30, 12);
+            pictureBox1.Location = new Point(26, 8);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(106, 66);
+            pictureBox1.Size = new Size(98, 82);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -117,11 +117,11 @@
             // 
             PayMode.AutoSize = true;
             PayMode.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            PayMode.Location = new Point(163, 22);
+            PayMode.Location = new Point(152, 24);
             PayMode.Name = "PayMode";
-            PayMode.Size = new Size(170, 45);
+            PayMode.Size = new Size(183, 45);
             PayMode.TabIndex = 0;
-            PayMode.Text = "Pay Mode";
+            PayMode.Text = "PAY MODE";
             // 
             // tabControl2
             // 
@@ -218,6 +218,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(26, 40);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to search";
