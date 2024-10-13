@@ -183,11 +183,6 @@ namespace Supermarket_mvp.Views
 
             return instance;
         }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

@@ -36,7 +36,7 @@ namespace Supermarket_mvp.Presenters
 
         private void LoadAllCategoriesList()
         {
-            categoriesList = repository.All;
+            categoriesList = repository.GetAll();
             categoriesBindingSource.DataSource = categoriesList;
         }
 
@@ -70,12 +70,12 @@ namespace Supermarket_mvp.Presenters
             bool emptyValue = string.IsNullOrWhiteSpace(this.View.SearchValue);
             if (emptyValue == false)
             {
-                categoriesList = repository.GetByValues(this.View.SearchValue);
+                categoriesList = repository.GetByValue(this.View.SearchValue);
 
             }
             else
             {
-                categoriesList = repository.All;
+                categoriesList = repository.GetAll();
             }
             categoriesBindingSource.DataSource =  categoriesList;
         }

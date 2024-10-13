@@ -32,13 +32,6 @@ namespace Supermarket_mvp._Repositories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<CategoriesModel> All => throw new NotImplementedException();
-
-        public IEnumerable<CategoriesModel> GetByValues(string values)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<CategoriesModel> GetAll()
         {
             var categoriesList = new List<CategoriesModel>();
@@ -48,7 +41,7 @@ namespace Supermarket_mvp._Repositories
 
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM PayMode ORDER BY Categories_Id DESC";
+                command.CommandText = "SELECT * FROM Categories ORDER BY Categories_Id DESC";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -56,7 +49,7 @@ namespace Supermarket_mvp._Repositories
                         var categoriesModel = new CategoriesModel();
                         categoriesModel.Id = (int)reader["Categories_Id"];
                         categoriesModel.Name = reader["Categories_Name"].ToString();
-                        categoriesModel.Description = reader["Categories_Observation"].ToString();
+                        categoriesModel.Description = reader["Categories_Descripction"].ToString();
                         categoriesList.Add(categoriesModel);
 
                     }

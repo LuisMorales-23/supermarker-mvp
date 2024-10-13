@@ -36,7 +36,7 @@
             tabPageCategoriesList = new TabPage();
             panel2 = new Panel();
             BtnClose = new Button();
-            BtnDelet = new Button();
+            BtnDelete = new Button();
             BtnEdit = new Button();
             BtnNew = new Button();
             DgPayMode = new DataGridView();
@@ -123,7 +123,7 @@
             panel2.BackColor = Color.Transparent;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(BtnClose);
-            panel2.Controls.Add(BtnDelet);
+            panel2.Controls.Add(BtnDelete);
             panel2.Controls.Add(BtnEdit);
             panel2.Controls.Add(BtnNew);
             panel2.Location = new Point(572, 14);
@@ -140,14 +140,14 @@
             BtnClose.TabIndex = 3;
             BtnClose.UseVisualStyleBackColor = true;
             // 
-            // BtnDelet
+            // BtnDelete
             // 
-            BtnDelet.Image = Properties.Resources.delete;
-            BtnDelet.Location = new Point(32, 147);
-            BtnDelet.Name = "BtnDelet";
-            BtnDelet.Size = new Size(145, 61);
-            BtnDelet.TabIndex = 2;
-            BtnDelet.UseVisualStyleBackColor = true;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(32, 147);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(145, 61);
+            BtnDelete.TabIndex = 2;
+            BtnDelete.UseVisualStyleBackColor = true;
             // 
             // BtnEdit
             // 
@@ -172,6 +172,7 @@
             // 
             DgPayMode.AllowUserToAddRows = false;
             DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(20, 65);
             DgPayMode.Name = "DgPayMode";
@@ -336,7 +337,7 @@
         private DataGridView DgPayMode;
         private Button BtnNew;
         private Button BtnClose;
-        private Button BtnDelet;
+        private Button BtnDelete;
         private Button BtnEdit;
         private TextBox TxtCategoriesDescription;
         private TextBox TxtCategoriesName;

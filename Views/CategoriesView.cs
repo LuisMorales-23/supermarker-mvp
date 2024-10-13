@@ -109,7 +109,7 @@ namespace Supermarket_mvp.Views
 
             };
 
-            BtnDelet.Click += delegate
+            BtnDelete.Click += delegate
             {
 
                 var result = MessageBox.Show(
@@ -152,12 +152,12 @@ namespace Supermarket_mvp.Views
 
 
 
-        private static PayModeView instance;
-        public static PayModeView GetInstance(Form parentContainer)
+        private static CategoriesView instance;
+        public static CategoriesView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new PayModeView();
+                instance = new CategoriesView();
                 instance.MdiParent = parentContainer;
 
                 instance.FormBorderStyle = FormBorderStyle.None;
@@ -173,11 +173,6 @@ namespace Supermarket_mvp.Views
             }
 
             return instance;
-        }
-
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
