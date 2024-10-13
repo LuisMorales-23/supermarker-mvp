@@ -32,13 +32,13 @@ namespace Supermarket_mvp.Presenters
 
             LoadAllPayModeList();
             this.view.Show();
-           
+
         }
 
         private void LoadAllPayModeList()
         {
-            payModeList=repository.GetAll();
-            payModeBindingSource.DataSource=payModeList;
+            payModeList = repository.GetAll();
+            payModeBindingSource.DataSource = payModeList;
         }
 
         private void CancelAction(object? sender, EventArgs e)
@@ -57,8 +57,8 @@ namespace Supermarket_mvp.Presenters
 
             try
             {
-                new Commnon.ModelDataValidation().Validate (payMode);
-                if  (view.IsEdit)
+                new Commnon.ModelDataValidation().Validate(payMode);
+                if (view.IsEdit)
                 {
                     repository.Edit(payMode);
                     view.Message = "PayMode edited succesfuly";
@@ -103,11 +103,11 @@ namespace Supermarket_mvp.Presenters
                 view.Message = "Pay Mode deleted succesfully";
                 LoadAllPayModeList();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                view.IsSuccesful=false;
+                view.IsSuccesful = false;
                 view.Message = "An error ocurred, cloud not delete pay mode";
-             
+
             }
 
         }
@@ -121,7 +121,7 @@ namespace Supermarket_mvp.Presenters
             //del datagrindview
             view.PayModeId = payMode.Id.ToString();
             view.PayModeName = payMode.Name;
-            view.PayModeObservation = payMode.Obvservation;
+            view.PayModeObservation = payMode.Obvservation.ToString();
 
             //Se establece el modo como edicion
             view.IsEdit = true;

@@ -107,10 +107,13 @@ namespace Supermarket_mvp.Views
             BtnEdit.Click += delegate { 
             
                 EditEvent?.Invoke(this, EventArgs.Empty);
-                tabControl2.TabPages.Remove(tabPagePayModeList);
-                tabControl2.TabPages.Add(tabPagePayModeDetail);
-                tabPagePayModeDetail.Text = "Edit Pay Mode";//Cambia el titulo de la pestaña
+                
+                
+                    tabControl2.TabPages.Remove(tabPagePayModeList);
+                    tabControl2.TabPages.Add(tabPagePayModeDetail);
+                    tabPagePayModeDetail.Text = "Edit Pay Mode";//Cambia el titulo de la pestaña
 
+                
             };
 
             BtnDelete.Click += delegate {

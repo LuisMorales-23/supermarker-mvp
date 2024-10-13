@@ -54,7 +54,7 @@ namespace Supermarket_mvp._Repositories
                 command.Connection = connection;
                 command.CommandText = @"UPDATE PayMode
                                        SET Pay_Mode_Name =@name,
-                                       Pay_Mode_Observation = Observation
+                                       Pay_Mode_Observation = @Observation
                                        WHERE Pay_Mode_Id =@id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModeModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = payModeModel.Obvservation;
