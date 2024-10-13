@@ -39,25 +39,25 @@
             BtnDelet = new Button();
             BtnEdit = new Button();
             BtnNew = new Button();
-            dataGridView1 = new DataGridView();
+            DgPayMode = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
             pictureBox2 = new PictureBox();
             tabPageCategoriesDetail = new TabPage();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            BtnSave = new Button();
-            BtnCancel = new Button();
-            TxtCategoriesId = new TextBox();
-            TxtCategoriesName = new TextBox();
             TxtCategoriesDescription = new TextBox();
+            TxtCategoriesName = new TextBox();
+            TxtCategoriesId = new TextBox();
+            BtnCancel = new Button();
+            BtnSave = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCategoriesList.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DgPayMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tabPageCategoriesDetail.SuspendLayout();
             SuspendLayout();
@@ -106,7 +106,7 @@
             // tabPageCategoriesList
             // 
             tabPageCategoriesList.Controls.Add(panel2);
-            tabPageCategoriesList.Controls.Add(dataGridView1);
+            tabPageCategoriesList.Controls.Add(DgPayMode);
             tabPageCategoriesList.Controls.Add(BtnSearch);
             tabPageCategoriesList.Controls.Add(TxtSearch);
             tabPageCategoriesList.Controls.Add(pictureBox2);
@@ -168,16 +168,16 @@
             BtnNew.TabIndex = 0;
             BtnNew.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DgPayMode
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(20, 65);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(526, 247);
-            dataGridView1.TabIndex = 3;
+            DgPayMode.AllowUserToAddRows = false;
+            DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgPayMode.Location = new Point(20, 65);
+            DgPayMode.Name = "DgPayMode";
+            DgPayMode.ReadOnly = true;
+            DgPayMode.Size = new Size(526, 247);
+            DgPayMode.TabIndex = 3;
             // 
             // BtnSearch
             // 
@@ -226,50 +226,22 @@
             tabPageCategoriesDetail.Text = "Categories Details";
             tabPageCategoriesDetail.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // TxtCategoriesDescription
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(20, 26);
-            label2.Name = "label2";
-            label2.Size = new Size(71, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Categorie Id";
+            TxtCategoriesDescription.Location = new Point(26, 177);
+            TxtCategoriesDescription.Multiline = true;
+            TxtCategoriesDescription.Name = "TxtCategoriesDescription";
+            TxtCategoriesDescription.PlaceholderText = "Categorie Description";
+            TxtCategoriesDescription.Size = new Size(276, 56);
+            TxtCategoriesDescription.TabIndex = 7;
             // 
-            // label3
+            // TxtCategoriesName
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(22, 89);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Categorie Name";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(25, 153);
-            label4.Name = "label4";
-            label4.Size = new Size(121, 15);
-            label4.TabIndex = 2;
-            label4.Text = "Categorie Description";
-            // 
-            // BtnSave
-            // 
-            BtnSave.Image = Properties.Resources.save;
-            BtnSave.Location = new Point(26, 256);
-            BtnSave.Name = "BtnSave";
-            BtnSave.Size = new Size(97, 46);
-            BtnSave.TabIndex = 3;
-            BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // BtnCancel
-            // 
-            BtnCancel.Image = Properties.Resources.cancel;
-            BtnCancel.Location = new Point(153, 257);
-            BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new Size(97, 46);
-            BtnCancel.TabIndex = 4;
-            BtnCancel.UseVisualStyleBackColor = true;
+            TxtCategoriesName.Location = new Point(24, 110);
+            TxtCategoriesName.Name = "TxtCategoriesName";
+            TxtCategoriesName.PlaceholderText = "Categorie Name";
+            TxtCategoriesName.Size = new Size(278, 23);
+            TxtCategoriesName.TabIndex = 6;
             // 
             // TxtCategoriesId
             // 
@@ -280,22 +252,50 @@
             TxtCategoriesId.TabIndex = 5;
             TxtCategoriesId.TextAlign = HorizontalAlignment.Right;
             // 
-            // TxtCategoriesName
+            // BtnCancel
             // 
-            TxtCategoriesName.Location = new Point(24, 110);
-            TxtCategoriesName.Name = "TxtCategoriesName";
-            TxtCategoriesName.PlaceholderText = "Categorie Name";
-            TxtCategoriesName.Size = new Size(278, 23);
-            TxtCategoriesName.TabIndex = 6;
+            BtnCancel.Image = Properties.Resources.cancel;
+            BtnCancel.Location = new Point(153, 257);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(97, 46);
+            BtnCancel.TabIndex = 4;
+            BtnCancel.UseVisualStyleBackColor = true;
             // 
-            // TxtCategoriesDescription
+            // BtnSave
             // 
-            TxtCategoriesDescription.Location = new Point(26, 177);
-            TxtCategoriesDescription.Multiline = true;
-            TxtCategoriesDescription.Name = "TxtCategoriesDescription";
-            TxtCategoriesDescription.PlaceholderText = "Categorie Description";
-            TxtCategoriesDescription.Size = new Size(276, 56);
-            TxtCategoriesDescription.TabIndex = 7;
+            BtnSave.Image = Properties.Resources.save;
+            BtnSave.Location = new Point(26, 256);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(97, 46);
+            BtnSave.TabIndex = 3;
+            BtnSave.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(25, 153);
+            label4.Name = "label4";
+            label4.Size = new Size(121, 15);
+            label4.TabIndex = 2;
+            label4.Text = "Categorie Description";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(22, 89);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 15);
+            label3.TabIndex = 1;
+            label3.Text = "Categorie Name";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(20, 26);
+            label2.Name = "label2";
+            label2.Size = new Size(71, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Categorie Id";
             // 
             // CategoriesView
             // 
@@ -313,7 +313,7 @@
             tabPageCategoriesList.ResumeLayout(false);
             tabPageCategoriesList.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DgPayMode).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tabPageCategoriesDetail.ResumeLayout(false);
             tabPageCategoriesDetail.PerformLayout();
@@ -333,7 +333,7 @@
         private PictureBox pictureBox2;
         private Button BtnSearch;
         private Panel panel2;
-        private DataGridView dataGridView1;
+        private DataGridView DgPayMode;
         private Button BtnNew;
         private Button BtnClose;
         private Button BtnDelet;
