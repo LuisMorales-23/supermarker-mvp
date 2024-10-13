@@ -36,7 +36,7 @@ namespace Supermarket_mvp.Presenters
 
         private void LoadAllCategoriesList()
         {
-            categoriesList = repository.GetAll();
+            categoriesList = repository.All;
             categoriesBindingSource.DataSource = categoriesList;
         }
 
@@ -75,7 +75,7 @@ namespace Supermarket_mvp.Presenters
             }
             else
             {
-                categoriesList = repository.GetAll();
+                categoriesList = repository.All;
             }
             categoriesBindingSource.DataSource =  categoriesList;
         }
