@@ -24,7 +24,7 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Categories VALUES (@name,@description)";
+                command.CommandText = "INSERT INTO Categories VALUES (@name,@descripction)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.Name;
                 command.Parameters.Add("@description", SqlDbType.NVarChar).Value = categoriesModel.Description;
                 command.ExecuteNonQuery();
@@ -56,7 +56,7 @@ namespace Supermarket_mvp._Repositories
                                        Categories_Descripction = @descripction
                                        WHERE Categories_Id =@id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.Name;
-                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value =categoriesModel.Description;
+                command.Parameters.Add("@descripction", SqlDbType.NVarChar).Value =categoriesModel.Description;
                 command.Parameters.Add("@id", SqlDbType.Int).Value = categoriesModel.Id;
                 command.ExecuteNonQuery();
             }
@@ -100,8 +100,8 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"SELECT - FROM Categories
-                                      WHERE Categories_Id=@id or Categories_Name LIKE @name+ '%
+                command.CommandText = @"SELECT * FROM Categories
+                                      WHERE Categories_Id=@id or Categories_Name LIKE @name+ '%'
                                       ORDER By Categories_Id DESC";
 
                 command.Parameters.Add("@id", SqlDbType.Int).Value = categoriesId;
@@ -113,7 +113,7 @@ namespace Supermarket_mvp._Repositories
                         var categoriesModel = new CategoriesModel();
                         categoriesModel.Id = (int)reader["Categories_Id"];
                         categoriesModel.Name = reader["Categories_Name"].ToString();
-                        categoriesModel.Description = reader["Categories_Observation"].ToString();
+                        categoriesModel.Description = reader["Categories_Descripction"].ToString();
                         categoriesList.Add(categoriesModel);
                     }
                 }

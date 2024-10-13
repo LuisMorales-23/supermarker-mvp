@@ -16,10 +16,10 @@ namespace Supermarket_mvp.Presenters
         private BindingSource categoriesBindingSource;
         private IEnumerable<CategoriesModel> categoriesList;
 
-        public CategoriesPresenter(ICategoriesView view, ICategoriesRepository repository)
+        public CategoriesPresenter (ICategoriesView view, ICategoriesRepository repository)
         {
             this.categoriesBindingSource = new BindingSource();
-            view = view;
+           this.view = view;
             this.repository = repository;
 
             this.view.SearchEvent += SearchCategories;
@@ -33,6 +33,23 @@ namespace Supermarket_mvp.Presenters
 
             LoadAllCategoriesList();
             this.view.Show();
+        }
+
+
+
+        private void SearchCategories(object? sender, EventArgs e)
+        {
+            bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
+            if (emptyValue == false)
+            {
+                categoriesList = repository.GetByValue(this.view.SearchValue);
+
+            }
+            else
+            {
+                categoriesList = repository.GetAll();
+            }
+            categoriesBindingSource.DataSource = categoriesList;
         }
 
         private void AddNewCategories(object? sender, EventArgs e)
@@ -97,7 +114,21 @@ namespace Supermarket_mvp.Presenters
 
         private void DeleteSelectedCategories(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try 
+            {
+                var categories = (CategoriesModel)categoriesBindingSource.Current;
+
+                repository.Delete(categories.Id);
+                view.IsSuccesful = true;
+
+                view.Message = "Categorie delete succesfuly";
+                LoadAllCategoriesList();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccesful= false;
+                view.Message = "An error ocurred, cloud not delete Categorie";
+            }
         }
 
         private void LoadSelectCategoriesToEdit(object? sender, EventArgs e)
@@ -112,21 +143,6 @@ namespace Supermarket_mvp.Presenters
 
             view.IsEdit = true;
         }
-
-
-        private void SearchCategories(object? sender, EventArgs e)
-        {
-            bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
-            if (emptyValue == false)
-            {
-                categoriesList = repository.GetByValue(this.view.SearchValue);
-
-            }
-            else
-            {
-                categoriesList = repository.GetAll();
-            }
-            categoriesBindingSource.DataSource = categoriesList;
-        }
+      
     }
 }
