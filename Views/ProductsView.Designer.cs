@@ -259,36 +259,40 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(27, 190);
             label5.Name = "label5";
-            label5.Size = new Size(81, 15);
+            label5.Size = new Size(86, 15);
             label5.TabIndex = 6;
             label5.Text = "Product Stock";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(30, 137);
             label4.Name = "label4";
-            label4.Size = new Size(78, 15);
+            label4.Size = new Size(82, 15);
             label4.TabIndex = 5;
             label4.Text = "Product Price";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(27, 91);
             label3.Name = "label3";
-            label3.Size = new Size(84, 15);
+            label3.Size = new Size(87, 15);
             label3.TabIndex = 4;
             label3.Text = "Product Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(36, 43);
             label2.Name = "label2";
-            label2.Size = new Size(62, 15);
+            label2.Size = new Size(65, 15);
             label2.TabIndex = 3;
             label2.Text = "Product Id";
             // 

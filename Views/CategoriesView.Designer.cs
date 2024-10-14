@@ -34,6 +34,11 @@
             pictureBox1 = new PictureBox();
             tabControl1 = new TabControl();
             tabPageCategoriesList = new TabPage();
+            panel2 = new Panel();
+            BtnClose = new Button();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
+            BtnNew = new Button();
             DgPayMode = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
@@ -47,19 +52,14 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            BtnNew = new Button();
-            BtnEdit = new Button();
-            BtnDelete = new Button();
-            BtnClose = new Button();
-            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCategoriesList.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             tabPageCategoriesDetail.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -117,6 +117,63 @@
             tabPageCategoriesList.TabIndex = 0;
             tabPageCategoriesList.Text = "Categories List";
             tabPageCategoriesList.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel2.BackColor = Color.White;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(BtnClose);
+            panel2.Controls.Add(BtnDelete);
+            panel2.Controls.Add(BtnEdit);
+            panel2.Controls.Add(BtnNew);
+            panel2.ForeColor = Color.Transparent;
+            panel2.Location = new Point(572, 14);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 298);
+            panel2.TabIndex = 4;
+            // 
+            // BtnClose
+            // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(32, 226);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(145, 59);
+            BtnClose.TabIndex = 3;
+            BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(32, 147);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(145, 61);
+            BtnDelete.TabIndex = 2;
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdit.ForeColor = SystemColors.ControlLightLight;
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(32, 77);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(145, 55);
+            BtnEdit.TabIndex = 1;
+            BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnNew
+            // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Location = new Point(32, 13);
+            BtnNew.Name = "BtnNew";
+            BtnNew.Size = new Size(145, 53);
+            BtnNew.TabIndex = 0;
+            BtnNew.UseVisualStyleBackColor = true;
             // 
             // DgPayMode
             // 
@@ -227,86 +284,32 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(25, 153);
             label4.Name = "label4";
-            label4.Size = new Size(121, 15);
+            label4.Size = new Size(128, 15);
             label4.TabIndex = 2;
             label4.Text = "Categorie Description";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(22, 89);
             label3.Name = "label3";
-            label3.Size = new Size(93, 15);
+            label3.Size = new Size(97, 15);
             label3.TabIndex = 1;
             label3.Text = "Categorie Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(20, 26);
             label2.Name = "label2";
-            label2.Size = new Size(71, 15);
+            label2.Size = new Size(75, 15);
             label2.TabIndex = 0;
             label2.Text = "Categorie Id";
-            // 
-            // BtnNew
-            // 
-            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(32, 13);
-            BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(145, 53);
-            BtnNew.TabIndex = 0;
-            BtnNew.UseVisualStyleBackColor = true;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.ForeColor = SystemColors.ControlLightLight;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(32, 77);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(145, 55);
-            BtnEdit.TabIndex = 1;
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(32, 147);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(145, 61);
-            BtnDelete.TabIndex = 2;
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnClose
-            // 
-            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(32, 226);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(145, 59);
-            BtnClose.TabIndex = 3;
-            BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel2.BackColor = Color.White;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(BtnClose);
-            panel2.Controls.Add(BtnDelete);
-            panel2.Controls.Add(BtnEdit);
-            panel2.Controls.Add(BtnNew);
-            panel2.ForeColor = Color.Transparent;
-            panel2.Location = new Point(572, 14);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 298);
-            panel2.TabIndex = 4;
             // 
             // CategoriesView
             // 
@@ -323,11 +326,11 @@
             tabControl1.ResumeLayout(false);
             tabPageCategoriesList.ResumeLayout(false);
             tabPageCategoriesList.PerformLayout();
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DgPayMode).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tabPageCategoriesDetail.ResumeLayout(false);
             tabPageCategoriesDetail.PerformLayout();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
