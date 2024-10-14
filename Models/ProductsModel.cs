@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace Supermarket_mvp.Models
 {
-    internal class Products
+    internal class ProductsModel
     {
 
         [DisplayName ("Product Id")]
