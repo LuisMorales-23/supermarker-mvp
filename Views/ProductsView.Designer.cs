@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TabPage tabPageProductsList;
+            tabPageProductsList = new TabPage();
             BtnSearch = new Button();
             DgProducts = new DataGridView();
             panel2 = new Panel();
@@ -55,7 +55,6 @@
             TxtProductsPrice = new TextBox();
             TxtProductsName = new TextBox();
             TxtProductsid = new TextBox();
-            tabPageProductsList = new TabPage();
             tabPageProductsList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgProducts).BeginInit();
             panel2.SuspendLayout();
@@ -83,6 +82,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.weui__arrow_filled__1_;
             BtnSearch.Location = new Point(494, 21);
             BtnSearch.Name = "BtnSearch";
@@ -94,6 +94,8 @@
             // 
             DgProducts.AllowUserToAddRows = false;
             DgProducts.AllowUserToDeleteRows = false;
+            DgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DgProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgProducts.Location = new Point(14, 58);
             DgProducts.Name = "DgProducts";
@@ -103,6 +105,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel2.Controls.Add(BtnClose);
             panel2.Controls.Add(BtnDelete);
             panel2.Controls.Add(BtnEdit);
@@ -150,6 +153,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(55, 24);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Search Product";
@@ -191,7 +195,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(180, 46);
+            label1.Location = new Point(178, 40);
             label1.Name = "label1";
             label1.Size = new Size(189, 45);
             label1.TabIndex = 0;
@@ -385,5 +389,6 @@
         private Button BtnCancel;
         private Button BtnSave;
         private TextBox TxtProductsCategorie;
+        private TabPage tabPageProductsList;
     }
 }

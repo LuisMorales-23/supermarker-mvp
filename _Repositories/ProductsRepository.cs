@@ -62,7 +62,7 @@ namespace Supermarket_mvp._Repositories
                         productsModel.Name = reader["Products_Name"].ToString();
                         productsModel.Price = (int)reader["Products_Price"];
                         productsModel.Stock = (int)reader["Products_Stock"];
-                        productsModel.Categories_Id = (int)reader["Categorie_Id"];
+                        productsModel.Categories_Id = (int)reader["Categories_Id"];
                         productsList.Add(productsModel);
 
                     }
@@ -97,7 +97,7 @@ namespace Supermarket_mvp._Repositories
                         productsModel.Name = reader["Products_Name"].ToString();
                         productsModel.Price = (int)reader["Products_Price"];
                         productsModel.Stock = (int)reader["Products_Stock"];
-                        productsModel.Categories_Id = (int)reader["Categorie_Id"];
+                        productsModel.Categories_Id = (int)reader["Categories_Id"];
                         productsList.Add(productsModel);
                     }
                 }

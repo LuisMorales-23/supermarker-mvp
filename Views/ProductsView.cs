@@ -16,26 +16,7 @@ namespace Supermarket_mvp.Views
         private bool isSuccesful;
         private string message;
 
-        public ProductsView()
-        {
-            InitializeComponent();
-            AssociateAndRaiseViewEvents();
-            tabControl1.TabPages.Remove(tabPageProductsDetail
-                );
-        }
-
-        private void AssociateAndRaiseViewEvents()
-        {
-            BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-
-            TxtSearch.KeyDown += (s, e) =>
-            {
-                if (SearchEvent != null)
-                {
-                    SearchEvent?.Invoke(this, EventArgs.Empty);
-                }
-            };
-        }
+        
 
         public string ProductsId 
         { get { return TxtProductsid.Text; }
@@ -66,9 +47,7 @@ namespace Supermarket_mvp.Views
             get { return TxtSearch.Text; }
             set { TxtSearch.Text = value; }
         }
-        /// <summary>
-        ///
-        /// </summary>
+      
         public bool IsEdit 
         { 
             get { return isEdit;}
@@ -96,5 +75,119 @@ namespace Supermarket_mvp.Views
         {
             DgProducts.DataSource = productsList;
         }
+
+        public ProductsView()
+        {
+            InitializeComponent();
+            AssociateAndRaiseViewEvents();
+            tabControl1.TabPages.Remove(tabPageProductsDetail
+                );
+        }
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+
+            TxtSearch.KeyDown += (s, e) =>
+            {
+                if (SearchEvent != null)
+                {
+                    SearchEvent?.Invoke(this, EventArgs.Empty);
+                }
+            };
+
+            BtnNew.Click += delegate
+            {
+
+
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+                tabPageProductsDetail.Text = "Add New  Product Mode ";
+
+            };
+
+
+            BtnEdit.Click += delegate
+            {
+
+                EditEvent?.Invoke(this, EventArgs.Empty);
+
+
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+                tabPageProductsDetail.Text = "Edit Product ";//Cambia el titulo de la pestaña
+
+
+            };
+
+            BtnDelete.Click += delegate
+            {
+
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete the select Pay Mode",
+                    "Warring",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+
+            BtnSave.Click += delegate
+            {
+
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccesful)
+                {
+                    tabControl1.TabPages.Remove(tabPageProductsDetail);
+                    tabControl1.TabPages.Add(tabPageProductsList);
+
+                }
+                MessageBox.Show(Message);
+
+            };
+
+
+            BtnCancel.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageProductsDetail);
+                tabControl1.TabPages.Add(tabPageProductsList);
+
+
+            };
+
+        }
+
+
+
+        private static ProductsView instance;
+        public static ProductsView GetInstance(Form parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new ProductsView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+
+            return instance;
+        }
     }
-}
+        
+    }
+
