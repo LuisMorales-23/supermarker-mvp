@@ -66,6 +66,7 @@ namespace Supermarket_mvp.Views
             AssociateAndRaiseViewEvents();
 
             tabControl1.TabPages.Remove(tabPageCategoriesDetail);
+            BtnClose.Click += delegate { this.Close(); };
         }
        
 

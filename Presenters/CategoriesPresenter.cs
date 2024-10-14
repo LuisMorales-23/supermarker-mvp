@@ -35,7 +35,10 @@ namespace Supermarket_mvp.Presenters
             this.view.Show();
         }
 
-
+        private void AddNewCategories(object? sender, EventArgs e)
+        {
+            view.IsEdit = false;
+        }
 
         private void SearchCategories(object? sender, EventArgs e)
         {
@@ -52,11 +55,7 @@ namespace Supermarket_mvp.Presenters
             categoriesBindingSource.DataSource = categoriesList;
         }
 
-        private void AddNewCategories(object? sender, EventArgs e)
-        {
-            view.IsEdit = true;
-        }
-
+    
         private void LoadAllCategoriesList()
         {
             categoriesList = repository.GetAll();
@@ -101,9 +100,9 @@ namespace Supermarket_mvp.Presenters
 
         private void CleanViewFields()
         {
-            view.CategoriesId = "0";
+            //view.CategoriesId = "0";
             view.CategoriesName = "";
-            view.CategoriesDescription = "0";
+            view.CategoriesDescription = "";
 
         }
 
@@ -133,16 +132,17 @@ namespace Supermarket_mvp.Presenters
 
         private void LoadSelectCategoriesToEdit(object? sender, EventArgs e)
         {
-            var categories = (CategoriesModel)categoriesBindingSource.Current;
+            var categories = (CategoriesModel) categoriesBindingSource.Current;
 
 
             view.CategoriesId = categories.Id.ToString();
             view.CategoriesName = categories.Name;
-            view.CategoriesId = categories.Description;
+            view.CategoriesId = categories.Description.ToString();
 
 
             view.IsEdit = true;
         }
+
       
     }
 }
