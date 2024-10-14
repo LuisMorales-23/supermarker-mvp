@@ -100,7 +100,7 @@ namespace Supermarket_mvp.Views
 
                 tabControl2.TabPages.Remove(tabPagePayModeList);
                 tabControl2.TabPages.Add(tabPagePayModeDetail);
-                tabPagePayModeDetail.Text = "Add New  Apy Mode ";
+                tabPagePayModeDetail.Text = "Add New  Pay Mode ";
 
             };
 

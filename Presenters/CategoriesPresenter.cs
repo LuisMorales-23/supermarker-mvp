@@ -100,7 +100,7 @@ namespace Supermarket_mvp.Presenters
 
         private void CleanViewFields()
         {
-            //view.CategoriesId = "0";
+            view.CategoriesId = "0";
             view.CategoriesName = "";
             view.CategoriesDescription = "";
 
@@ -137,7 +137,7 @@ namespace Supermarket_mvp.Presenters
 
             view.CategoriesId = categories.Id.ToString();
             view.CategoriesName = categories.Name;
-            view.CategoriesId = categories.Description.ToString();
+            view.CategoriesDescription = categories.Description;
 
 
             view.IsEdit = true;

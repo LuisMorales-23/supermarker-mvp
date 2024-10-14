@@ -46,8 +46,6 @@
             TxtProductStock = new TextBox();
             BtnCancel = new Button();
             BtnSave = new Button();
-            TxtProductsCategorie = new TextBox();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -217,8 +215,6 @@
             tabPageProductsDetail.Controls.Add(TxtProductStock);
             tabPageProductsDetail.Controls.Add(BtnCancel);
             tabPageProductsDetail.Controls.Add(BtnSave);
-            tabPageProductsDetail.Controls.Add(TxtProductsCategorie);
-            tabPageProductsDetail.Controls.Add(label6);
             tabPageProductsDetail.Controls.Add(label5);
             tabPageProductsDetail.Controls.Add(label4);
             tabPageProductsDetail.Controls.Add(label3);
@@ -259,23 +255,6 @@
             BtnSave.Size = new Size(144, 50);
             BtnSave.TabIndex = 11;
             BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // TxtProductsCategorie
-            // 
-            TxtProductsCategorie.Location = new Point(136, 230);
-            TxtProductsCategorie.Name = "TxtProductsCategorie";
-            TxtProductsCategorie.PlaceholderText = "Product Categorie";
-            TxtProductsCategorie.Size = new Size(129, 23);
-            TxtProductsCategorie.TabIndex = 10;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(27, 236);
-            label6.Name = "label6";
-            label6.Size = new Size(103, 15);
-            label6.TabIndex = 7;
-            label6.Text = "Categorie Product";
             // 
             // label5
             // 
@@ -381,14 +360,12 @@
         private TextBox TxtProductsPrice;
         private TextBox TxtProductsName;
         private TextBox TxtProductsid;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private TextBox TxtProductStock;
         private Button BtnCancel;
         private Button BtnSave;
-        private TextBox TxtProductsCategorie;
         private TabPage tabPageProductsList;
     }
 }

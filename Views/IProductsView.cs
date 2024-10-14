@@ -12,7 +12,7 @@ namespace Supermarket_mvp.Views
         string ProductsName { get; set; } // Nombre del modo de pago
         string ProductsPrice { get; set; } // Observación del modo de pago
         string ProductsStock { get; set; } // Observación del modo de pago
-        string ProductsCategorieId { get; set; } // Observación del modo de pago
+      
         string SearchValue { get; set; } // Valor para buscar modos de pago
         bool IsEdit { get; set; } // Indica si es una operación de edición
         bool IsSuccesful { get; set; }

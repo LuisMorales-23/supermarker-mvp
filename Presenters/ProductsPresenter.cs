@@ -49,7 +49,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductsName = "";
             view.ProductsPrice = "0";
             view.ProductsStock = "0";
-            view.ProductsCategorieId = "0";
+         
         }
 
         private void SaveProducts(object? sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Supermarket_mvp.Presenters
             products.Name = view.ProductsName;
             products.Price = Convert.ToInt32(view.ProductsPrice);
             products.Stock = Convert.ToInt32(view.ProductsStock);
-            //products.Categories_Id = Convert.ToInt32(view.ProductsCategorieId);
+         
 
 
             try
@@ -117,7 +117,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductsName = products.Name;
             view.ProductsPrice = products.Price.ToString();
             view.ProductsStock = products.Stock.ToString();
-            view.ProductsCategorieId = products.Categories_Id.ToString();
+           
             view.IsEdit = true;
         }
 

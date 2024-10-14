@@ -37,11 +37,8 @@ namespace Supermarket_mvp.Views
             get { return TxtProductStock.Text; }
             set { TxtProductStock.Text = value; }
         }
-        public string ProductsCategorieId
-        {
-            get { return TxtProductsCategorie.Text; }
-            set { TxtProductsCategorie.Text = value; }
-        }
+       
+        
         public string SearchValue 
         {
             get { return TxtSearch.Text; }
@@ -80,8 +77,8 @@ namespace Supermarket_mvp.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
-            tabControl1.TabPages.Remove(tabPageProductsDetail
-                );
+            tabControl1.TabPages.Remove(tabPageProductsDetail);
+            BtnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
