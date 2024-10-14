@@ -24,23 +24,45 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Products(@name,@price,@stock,@id)";
+                command.CommandText = "INSERT INTO Products VALUES (@name,@price,@stock)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productsModel.Name;
                 command.Parameters.Add("@price", SqlDbType.Int).Value = productsModel.Price;
                 command.Parameters.Add("@stock", SqlDbType.Int).Value = productsModel.Stock;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = productsModel.Categories_Id;
                 command.ExecuteNonQuery();
             }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM Products WHERE Products_Id = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Edit(ProductsModel productsModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"UPDATE Products
+                                       SET Products_Name =@name,
+                                       Products_Price= @price,
+                                       Products_Stock= @stock
+                                       WHERE Products_Id =@id";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productsModel.Name;
+                command.Parameters.Add("@price", SqlDbType.NVarChar).Value =productsModel.Price;
+                command.Parameters.Add("@stock", SqlDbType.NVarChar).Value =productsModel.Stock;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = productsModel.Id;
+                command.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<ProductsModel> GetAll()
@@ -62,7 +84,7 @@ namespace Supermarket_mvp._Repositories
                         productsModel.Name = reader["Products_Name"].ToString();
                         productsModel.Price = (int)reader["Products_Price"];
                         productsModel.Stock = (int)reader["Products_Stock"];
-                        productsModel.Categories_Id = (int)reader["Categories_Id"];
+                        
                         productsList.Add(productsModel);
 
                     }
@@ -97,7 +119,7 @@ namespace Supermarket_mvp._Repositories
                         productsModel.Name = reader["Products_Name"].ToString();
                         productsModel.Price = (int)reader["Products_Price"];
                         productsModel.Stock = (int)reader["Products_Stock"];
-                        productsModel.Categories_Id = (int)reader["Categories_Id"];
+                       
                         productsList.Add(productsModel);
                     }
                 }

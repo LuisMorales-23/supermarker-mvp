@@ -92,7 +92,7 @@
             // 
             DgProducts.AllowUserToAddRows = false;
             DgProducts.AllowUserToDeleteRows = false;
-            DgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            DgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgProducts.Location = new Point(14, 58);
@@ -184,7 +184,7 @@
             pictureBox1.Image = Properties.Resources.products;
             pictureBox1.Location = new Point(17, 14);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(137, 101);
+            pictureBox1.Size = new Size(117, 95);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -193,7 +193,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(178, 40);
+            label1.Location = new Point(149, 45);
             label1.Name = "label1";
             label1.Size = new Size(189, 45);
             label1.TabIndex = 0;
